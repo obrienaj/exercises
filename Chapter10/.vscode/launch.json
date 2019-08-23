@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Rainfall",
+            "request": "launch",
+            "mainClass": "Rainfall"
+        }
+    ]
+}
