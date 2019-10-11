@@ -52,29 +52,44 @@ while (score1 < 10000 && score2 < 10000){
 
         d1 = rand.nextInt(6) + 1;
         System.out.println("Die 1: " + d1);
-
+    
         if (remaining > 1){
             d2 = rand.nextInt(6) + 1;
             System.out.println("Die 2: " + d2);
-            
-            System.out.println("Score die 1? (0/1)");
-            keep1 = scan.nextInt();
+        }
+        if (remaining > 2){
+            d3 = rand.nextInt(6) + 1;
+            System.out.println("Die 3: " + d3);
+        }
+        if (remaining > 3){
+            d4 = rand.nextInt(6) + 1;
+            System.out.println("Die 4: " + d4);
+        }
+        if (remaining > 4){
+            d5 = rand.nextInt(6) + 1;
+            System.out.println("Die 5: " + d5);
+        }
 
-            if (keep1 == 1){
+        if (remaining > 5){
+            d6 = rand.nextInt(6) + 1;
+            System.out.println("Die 6: " + d6);
+        }
+        
+        System.out.println("Score die 1? (0/1)");
+        keep1 = scan.nextInt();
+
+        if (keep1 == 1){
                 if (d1 == 1)
                     sum1 = sum1 + 100;               // ignoring the three-of-a-kind rule
                 if (d1 == 5)
                     sum1 = sum1 + 50;
                 remaining = remaining - 1;
-            }
-        }
-        if (remaining > 2){
-            d3 = rand.nextInt(6) + 1;
-            System.out.println("Die 3: " + d3);
+                }
 
+        if (remaining > 1){
             System.out.println("Score die 2? (0/1)");
             keep2 = scan.nextInt();
-
+        
             if (keep2 == 1){
                 if (d2 == 1)
                     sum1 = sum1 + 100;
@@ -83,10 +98,7 @@ while (score1 < 10000 && score2 < 10000){
                 remaining = remaining - 1;
             }
         }
-        if (remaining > 3){
-            d4 = rand.nextInt(6) + 1;
-            System.out.println("Die 4: " + d4);
-
+        if (remaining > 2){
             System.out.println("Score die 3? (0/1)");
             keep3 = scan.nextInt();
 
@@ -98,10 +110,7 @@ while (score1 < 10000 && score2 < 10000){
                 remaining = remaining - 1;
             }
         }
-        if (remaining > 4){
-            d5 = rand.nextInt(6) + 1;
-            System.out.println("Die 5: " + d5);
-
+        if (remaining > 3){
             System.out.println("Score die 4? (0/1)");
             keep4 = scan.nextInt();
 
@@ -113,10 +122,7 @@ while (score1 < 10000 && score2 < 10000){
                 remaining = remaining - 1;
             }
         }
-        if (remaining > 5){
-            d6 = rand.nextInt(6) + 1;
-            System.out.println("Die 6: " + d6);
-        
+        if (remaining > 4){
             System.out.println("Score die 5? (0/1)");
             keep5 = scan.nextInt();
             
@@ -128,10 +134,10 @@ while (score1 < 10000 && score2 < 10000){
                 remaining = remaining - 1;
             }
         }
+        if (remaining > 5){
+            System.out.println("Score die 6? (0/1)");
+            keep6 = scan.nextInt();
 
-        if (remaining == 6){
-        System.out.println("Score die 6? (0/1)");
-        keep6 = scan.nextInt();
             if (keep6 == 1){
                 if (d6 == 1)
                     sum1 = sum1 + 100;
@@ -143,30 +149,4 @@ while (score1 < 10000 && score2 < 10000){
     }
 }
 }
-
-    d1 = rand.nextInt(6) + 1;
-    System.out.println("Die 1: " + d1);
-
-    if (remaining > 1){
-        d2 = rand.nextInt(6) + 1;
-        System.out.println("Die 2: " + d2);
-        }
-    if (remaining > 2){
-        d3 = rand.nextInt(6) + 1;
-        System.out.println("Die 3: " + d3);
-        }
-    if (remaining > 3){
-        d4 = rand.nextInt(6) + 1;
-        System.out.println("Die 4: " + d4);
-        }
-    if (remaining > 4){
-        d5 = rand.nextInt(6) + 1;
-        System.out.println("Die 5: " + d5);
-        }
-    if (remaining > 5){
-        d6 = rand.nextInt(6) + 1;
-        System.out.println("Die 6: " + d6);
-        }
-
-
 }
