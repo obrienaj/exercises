@@ -2,7 +2,7 @@ public class Cylinder{
 
     public static void main(String[] args){
 
-        Cylinder cylinder = new Cylinder(2, 4);
+        CylinderTester cylinder = new CylinderTester(2, 4);
 
         System.out.print("r = " + cylinder.getR());
         System.out.print("  ");
@@ -12,7 +12,7 @@ public class Cylinder{
         System.out.print("  ");
         System.out.println("Surface area = " + cylinder.surfaceArea());
         
-        Cylinder cylinder2 = new Cylinder(1, 3);
+        CylinderTester cylinder2 = new CylinderTester(1, 3);
 
         System.out.print("r = " + cylinder2.getR());
         System.out.print("  ");
@@ -22,7 +22,7 @@ public class Cylinder{
         System.out.print("  ");
         System.out.println("Surface area = " + cylinder2.surfaceArea());
         
-        Cylinder cylinder3 = new Cylinder(5, 2);
+        CylinderTester cylinder3 = new CylinderTester(5, 2);
 
         System.out.print("r = " + cylinder3.getR());
         System.out.print("  ");
@@ -33,30 +33,5 @@ public class Cylinder{
         System.out.println("Surface area = " + cylinder3.surfaceArea());
 
     }
-
-    private double r;
-    private double h;
-
-    public Cylinder(double r, double h){
-        this.r = r;
-        this.h = h;
-    }
-
-    public double getR(){
-        return this.r;
-    }
-
-    public double getH(){
-        return this.h;
-    }
-
-    public double volume(){
-        return Math.PI * r*r * h;
-    }
-
-    public double surfaceArea(){
-        return (2 * Math.PI * r) * (r + h);
-    }
-
 
 }
