@@ -1,13 +1,34 @@
 public class Box{
 
-    public static void main(String[] args){
+    private double length;
+    private double width;
+    private double height;
 
-        Box box = new Box(2.5, 5.0, 6.0);
+    public Box(double width, double height, double length){
 
-        System.out.println("Area: " + box.area() + " Volume: " + box.volume());
-
-        System.out.println("Length: " + box.length() + " Height: " + box.height() + " Width: " + box.width());
-
+        this.width = width;
+        this.height = height;
+        this.length = length;
+        
     }
 
+    public double getWidth(){
+        return width;
+    }
+
+    public double getHeight(){
+        return height;
+    }
+
+    public double getLength(){
+        return length;
+    }
+
+    public double volume(){
+        return width * length * height;
+    }
+
+    public double area(){
+        return (2 * length * width) + (2 * width * height) + (2 * height * length);
+    }
 }
