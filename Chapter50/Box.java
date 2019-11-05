@@ -12,6 +12,18 @@ public class Box{
         
     }
 
+    public Box biggerBox(Box oldBox){
+
+        return new Box(1.25 * width, 1.25 * height, 1.25 * length);
+    
+    }
+
+    public Box smallerBox(Box oldBox){
+
+        return new Box(.75 * width, .75 * height, .75 * length);
+    
+    }
+
     public double getWidth(){
         return width;
     }
@@ -28,7 +40,27 @@ public class Box{
         return width * length * height;
     }
 
+    private double faceArea(){
+        return length*width;
+    }
+
+    private double topArea(){
+        return length*height;
+    }
+
+    private double sideArea(){
+        return height*width;
+    }
+
     public double area(){
-        return (2 * length * width) + (2 * width * height) + (2 * height * length);
+        return (2 * faceArea()) + (2 * topArea()) + (2 * sideArea());
+    }
+
+    public boolean nests(){
+
+        if ()
+            return true;
+        else
+            return false;
     }
 }
