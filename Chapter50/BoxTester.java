@@ -17,7 +17,9 @@ public class BoxTester{
         System.out.println("25% smaller:");
         System.out.println("Surface area: " + smallerBox.area() + " Volume: " + smallerBox.volume());
 
-        
+        System.out.println("Original box nests in bigger box: " + box.nests(biggerBox));
+        System.out.println("Bigger box nests in original box: " + biggerBox.nests(box));
+        System.out.println("Smaller box nests in bigger box: " + smallerBox.nests(biggerBox));
     }
 
 }

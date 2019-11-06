@@ -13,15 +13,11 @@ public class Box{
     }
 
     public Box biggerBox(Box oldBox){
-
         return new Box(1.25 * width, 1.25 * height, 1.25 * length);
-    
     }
 
     public Box smallerBox(Box oldBox){
-
         return new Box(.75 * width, .75 * height, .75 * length);
-    
     }
 
     public double getWidth(){
@@ -56,11 +52,16 @@ public class Box{
         return (2 * faceArea()) + (2 * topArea()) + (2 * sideArea());
     }
 
-    public boolean nests(){
+    public boolean nests(Box outsideBox){
 
-        if ()
+        double outsideWidth = outsideBox.getWidth();
+        double outsideHeight = outsideBox.getHeight();
+        double outsideLength = outsideBox.getLength();
+
+        if (outsideLength >= length && outsideHeight >= height && outsideWidth >= width)
             return true;
         else
             return false;
     }
+
 }
