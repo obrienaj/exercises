@@ -9,8 +9,8 @@ class Jam
   // Constructors
   public Jam( String contents, String date, int size )
   {
-    this . contents = contents  ;
-    this . date = date ;
+    this.contents = contents  ;
+    this.date = date ;
     capacity = size;
   }
 
