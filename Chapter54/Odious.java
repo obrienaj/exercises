@@ -13,7 +13,7 @@ public class Odious{
 
         while (n >= 0){
 
-            odious = odious(n)
+            odious = odious(n);
 
             if (odious)
                 System.out.println("N is odious.");
@@ -27,10 +27,11 @@ public class Odious{
 
     }
 
-    public static odious(n){
+    public static boolean odious(int n){
 
-        j = n;
-        sum = 0;
+        int j = n;
+        int i = 0;
+        int sum = 0;
 
         while (j > 0){
 
@@ -39,6 +40,10 @@ public class Odious{
 
             j = j / 2;
         }
+        if (sum % 2 == 0)
+            return false;
+        else
+            return true;
     }
 
 }
