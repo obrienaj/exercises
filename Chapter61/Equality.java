@@ -16,11 +16,13 @@ class Equality
             match = true;
         else
             match = false;
-            return false;
 
         j++;
       }
-      return true;
+      if (match)
+        return true;
+      else
+        return false;
   }
   
   public static void main ( String[] args )
@@ -29,13 +31,13 @@ class Equality
     int[] arrayB = { 1, 2, 3, 4 };
 
     System.out.print("Arrays says: ")    ;
-    if ( Arrays.equals( arrayE, null ) )
+    if ( Arrays.equals( arrayA, arrayB ) )
       System.out.println( "Equal" );
     else
       System.out.println( "NOT Equal" );      
 
     System.out.print("myEquals says: ")    ;
-    if ( myEquals( arrayE, null ) )
+    if ( myEquals( arrayA, arrayB ) )
       System.out.println( "Equal" );
     else
       System.out.println( "NOT Equal" );      
