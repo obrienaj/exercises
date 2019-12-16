@@ -6,7 +6,7 @@ public class GeoLocation
     private String name = "";
 
     // Constructor
-    public GeoLocation(double latitude double longitude, String name)
+    public GeoLocation(double latitude, double longitude, String name)
     {
         this.latitude = latitude;
         this.longitude = longitude;
@@ -14,11 +14,11 @@ public class GeoLocation
     }
 
     // Getters and setters
-    public double getLatitude()
+    public double getLat()
     {
         return latitude;
     }
-    public double getLongitude()
+    public double getLong()
     {
         return longitude;
     }
@@ -45,8 +45,8 @@ public class GeoLocation
         double a, c, d;
         final double r = 6371;
 
-        a = pow(sin((ptA.getLat() - ptB.getLat()) / 2), 2)
-            + cos(ptA.getLat()) * cos(ptB.getLat()) * pow(sin((ptA.getLong - ptB.getLong()) / 2), 2);
+        a = pow(Math.sin((ptA.getLat() - ptB.getLat()) / 2), 2)
+            + Math.cos(ptA.getLat()) * Math.cos(ptB.getLat()) * pow(Math.sin((ptA.getLong() - ptB.getLong()) / 2), 2);
         
         c = 2 * atan2(sqrt(a), sqrt(1 - a));
         
