@@ -5,6 +5,7 @@ public class WeatherInfoTester
         WeatherInfo climate1 = new WeatherInfo(new GeoLocation(10, 42, "Allie Island"), 81);
         WeatherInfo climate2 = new WeatherInfo(new GeoLocation(42, 0, "Hell"), 2);        
     
-        System.out.println("The average temperature in " + climate1.getName() + " is " + climate1.getTemp());
+        System.out.println(climate1);
+        System.out.println(climate2);
     }
 }
